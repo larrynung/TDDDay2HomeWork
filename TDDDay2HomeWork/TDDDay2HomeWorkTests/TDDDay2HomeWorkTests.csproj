@@ -36,6 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -55,14 +59,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PotterShoppingCart.feature</DependentUpon>
     </Compile>
+    <Compile Include="Steps\PotterShoppingCartSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\TDDDay2HomeWork\TDDDay2HomeWork.csproj">
+      <Project>{98391E63-6216-4EFA-8E6B-5EC43EA4319E}</Project>
+      <Name>TDDDay2HomeWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Features\PotterShoppingCart.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PotterShoppingCart.feature.cs</LastGenOutput>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -18,8 +18,7 @@ namespace TDDDay2HomeWorkTests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("PotterShoppingCart")]
+    [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
     public partial class PotterShoppingCartFeature
     {
         
@@ -28,27 +27,32 @@ namespace TDDDay2HomeWorkTests.Features
 #line 1 "PotterShoppingCart.feature"
 #line hidden
         
-        [NUnit.Framework.TestFixtureSetUpAttribute()]
-        public virtual void FeatureSetup()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
+        public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PotterShoppingCart", "In order to 提供最便宜的價格給來買書的爸爸媽媽\r\nAs a 佛心的出版社老闆\r\nI want to 設計一個哈利波特的購物車", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [NUnit.Framework.TestFixtureTearDownAttribute()]
-        public virtual void FeatureTearDown()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute()]
+        public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
-        [NUnit.Framework.SetUpAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute()]
         public virtual void TestInitialize()
         {
+            if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "PotterShoppingCart")))
+            {
+                TDDDay2HomeWorkTests.Features.PotterShoppingCartFeature.FeatureSetup(null);
+            }
         }
         
-        [NUnit.Framework.TearDownAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -64,8 +68,9 @@ namespace TDDDay2HomeWorkTests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("第一集買了一本，其他都沒買，價格應為100*1=100元")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("第一集買了一本，其他都沒買，價格應為100*1=100元")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PotterShoppingCart")]
         public virtual void 第一集買了一本其他都沒買價格應為1001100元()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("第一集買了一本，其他都沒買，價格應為100*1=100元", ((string[])(null)));
@@ -89,8 +94,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("第一集買了一本，第二集也買了一本，價格應為100*2*0.95=190")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("第一集買了一本，第二集也買了一本，價格應為100*2*0.95=190")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PotterShoppingCart")]
         public virtual void 第一集買了一本第二集也買了一本價格應為10020_95190()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("第一集買了一本，第二集也買了一本，價格應為100*2*0.95=190", ((string[])(null)));
@@ -114,8 +120,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("一二三集各買了一本，價格應為100*3*0.9=270")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("一二三集各買了一本，價格應為100*3*0.9=270")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PotterShoppingCart")]
         public virtual void 一二三集各買了一本價格應為10030_9270()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("一二三集各買了一本，價格應為100*3*0.9=270", ((string[])(null)));
@@ -139,8 +146,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("一二三四集各買了一本，價格應為100*4*0.8=320")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("一二三四集各買了一本，價格應為100*4*0.8=320")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PotterShoppingCart")]
         public virtual void 一二三四集各買了一本價格應為10040_8320()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("一二三四集各買了一本，價格應為100*4*0.8=320", ((string[])(null)));
@@ -164,8 +172,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("一次買了整套，一二三四五集各買了一本，價格應為100*5*0.75=375")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("一次買了整套，一二三四五集各買了一本，價格應為100*5*0.75=375")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PotterShoppingCart")]
         public virtual void 一次買了整套一二三四五集各買了一本價格應為10050_75375()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("一次買了整套，一二三四五集各買了一本，價格應為100*5*0.75=375", ((string[])(null)));
@@ -189,8 +198,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("一二集各買了一本，第三集買了兩本，價格應為100*3*0.9 + 100 = 370")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("一二集各買了一本，第三集買了兩本，價格應為100*3*0.9 + 100 = 370")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PotterShoppingCart")]
         public virtual void 一二集各買了一本第三集買了兩本價格應為10030_9100370()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("一二集各買了一本，第三集買了兩本，價格應為100*3*0.9 + 100 = 370", ((string[])(null)));
@@ -214,8 +224,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("第一集買了一本，第二三集各買了兩本，價格應為100*3*0.9 + 100*2*0.95 = 460")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("第一集買了一本，第二三集各買了兩本，價格應為100*3*0.9 + 100*2*0.95 = 460")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PotterShoppingCart")]
         public virtual void 第一集買了一本第二三集各買了兩本價格應為10030_910020_95460()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("第一集買了一本，第二三集各買了兩本，價格應為100*3*0.9 + 100*2*0.95 = 460", ((string[])(null)));
