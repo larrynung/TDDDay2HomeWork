@@ -100,7 +100,7 @@ namespace TDDDay2HomeWorkTests.Features
         [Then(@"價格應為 (.*) 元")]
         public void Then價格應為元(decimal dollar)
         {
-            var actual = (int) ScenarioContext.Current["actual"];
+            var actual = (decimal) ScenarioContext.Current["actual"];
             var expected = dollar;
 
             Assert.AreEqual(expected, actual);
