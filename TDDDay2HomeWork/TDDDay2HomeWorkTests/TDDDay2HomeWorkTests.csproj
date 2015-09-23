@@ -59,14 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PotterShoppingCart.feature</DependentUpon>
     </Compile>
-    <Compile Include="Steps\PotterShoppingCartSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TDDDay2HomeWork\TDDDay2HomeWork.csproj">
-      <Project>{98391E63-6216-4EFA-8E6B-5EC43EA4319E}</Project>
-      <Name>TDDDay2HomeWork</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -77,6 +70,9 @@
       <LastGenOutput>PotterShoppingCart.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Steps\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
