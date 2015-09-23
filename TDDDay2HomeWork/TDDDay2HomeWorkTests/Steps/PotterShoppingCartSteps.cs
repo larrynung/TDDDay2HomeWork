@@ -10,21 +10,6 @@ namespace TDDDay2HomeWorkTests.Features
     [Binding]
     public class PotterShoppingCartSteps
     {
-        [BeforeFeature]
-        public static void BeforeFeature()
-        {
-            FeatureContext.Current["Books"] = new Book[]
-            {
-                new Book("Harry Potter and the Philosopher's Stone", "Harry Potter", 1, "J.K. Rowling", 100),
-                new Book("Harry Potter and the Chamber of Secrets", "Harry Potter", 2, "J.K. Rowling", 100),
-                new Book("Harry Potter and the Prisoner of Azkaban", "Harry Potter", 3, "J.K. Rowling", 100),
-                new Book("Harry Potter and the Goblet of Fire", "Harry Potter", 4, "J.K. Rowling", 100),
-                new Book("Harry Potter and the Order of the Phoenix", "Harry Potter", 5, "J.K. Rowling", 100),
-                new Book("Harry Potter and the Half-Blood Prince", "Harry Potter", 6, "J.K. Rowling", 100),
-                new Book("Harry Potter and the Deathly Hallows", "Harry Potter", 7, "J.K. Rowling", 100)
-            };
-        }
-
         [BeforeScenario]
         public static void BeforeScenario()
         {
@@ -36,8 +21,7 @@ namespace TDDDay2HomeWorkTests.Features
         {
             var target = ScenarioContext.Current["Target"] as PotterShoppingCart;
             var goods = target.Goods;
-            var books = FeatureContext.Current["Books"] as Book[];
-            var book = books.First(item=>item.Series == "Harry Potter" && item.Volume == 1);
+            var book = new Book("Harry Potter and the Philosopher's Stone", "Harry Potter", 1, "J.K. Rowling", 100);
 
             goods[book] = count;
         }
@@ -47,8 +31,7 @@ namespace TDDDay2HomeWorkTests.Features
         {
             var target = ScenarioContext.Current["Target"] as PotterShoppingCart;
             var goods = target.Goods;
-            var books = FeatureContext.Current["Books"] as Book[];
-            var book = books.First(item => item.Series == "Harry Potter" && item.Volume == 2);
+            var book = new Book("Harry Potter and the Chamber of Secrets", "Harry Potter", 2, "J.K. Rowling", 100);
 
             goods[book] = count;
         }
@@ -58,8 +41,7 @@ namespace TDDDay2HomeWorkTests.Features
         {
             var target = ScenarioContext.Current["Target"] as PotterShoppingCart;
             var goods = target.Goods;
-            var books = FeatureContext.Current["Books"] as Book[];
-            var book = books.First(item => item.Series == "Harry Potter" && item.Volume == 3);
+            var book = new Book("Harry Potter and the Prisoner of Azkaban", "Harry Potter", 3, "J.K. Rowling", 100);
 
             goods[book] = count;
         }
@@ -69,8 +51,7 @@ namespace TDDDay2HomeWorkTests.Features
         {
             var target = ScenarioContext.Current["Target"] as PotterShoppingCart;
             var goods = target.Goods;
-            var books = FeatureContext.Current["Books"] as Book[];
-            var book = books.First(item => item.Series == "Harry Potter" && item.Volume == 4);
+            var book = new Book("Harry Potter and the Goblet of Fire", "Harry Potter", 4, "J.K. Rowling", 100);
 
             goods[book] = count;
         }
@@ -80,8 +61,7 @@ namespace TDDDay2HomeWorkTests.Features
         {
             var target = ScenarioContext.Current["Target"] as PotterShoppingCart;
             var goods = target.Goods;
-            var books = FeatureContext.Current["Books"] as Book[];
-            var book = books.First(item => item.Series == "Harry Potter" && item.Volume == 5);
+            var book = new Book("Harry Potter and the Order of the Phoenix", "Harry Potter", 5, "J.K. Rowling", 100);
 
             goods[book] = count;
         }
